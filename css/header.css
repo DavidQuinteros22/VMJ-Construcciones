@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --color-text-negro: #000000;
+    --color-text-gris-oscuro: #1e1e1e;
+    --color-text-gris-medio: #363732;
+    --color-text-gris-claro: #7D898B;
+
+    --color-text-blanco: #fff;
+    --color-text-blanco-claro: rgba(255, 255, 255, 60%);
+
+    --color-bg-claro: #f6f6f6;
+    --color-bg-blanco: #fff;
+    --color-bg-principal: #4fc5c7;
+    --color-bg-secundario: #005c6a;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Lato',sans-serif;
+    height: 70px;
+    background-color: var(--color-bg-blanco);
+}
+
+nav .logo{
+    float: left;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.img-logo{
+    width: 120px;
+    padding-top: 2.5rem;
+}
+
+nav .links{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li{
+    list-style: none;
+}
+
+nav .links a{
+     display: block;
+     padding: 1em;
+     font-size: 16px;
+     font-weight: 300;
+     color: var(--color-text-gris-claro);
+     text-decoration: none;
+}
+
+#nav-toggle{
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burguer{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burguer .line{
+    width: 30px;
+    height: 5px;
+    background-color: var(--color-text-gris-medio);
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width:950px) {
+    
+    nav .logo{
+       float: none;
+       width: auto;
+       justify-content: center; 
+    }
+    
+    nav .links{
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color:rgba(0, 0, 0, 0.9) ;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    nav .links a{
+        font-size: 20px;
+    }
+
+    nav :checked ~ .links{
+        bottom: 0;
+    }
+    nav .icon-burguer{
+        display: block;
+    }
+    nav :checked ~ .icon-burguer .line:nth-child(1){
+        transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked ~ .icon-burguer .line:nth-child(3){
+        transform: translateY(-10px)rotate(-225deg);
+    }
+    nav :checked ~ .icon-burguer .line:nth-child(2){
+        opacity: 0;
+    }
+}

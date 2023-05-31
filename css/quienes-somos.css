@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+:root {
+    --color-text-negro: #000000;
+    --color-text-gris-oscuro: #1e1e1e;
+    --color-text-gris-medio: #363732;
+    --color-text-gris-claro: #7D898B;
+
+    --color-text-blanco: #fff;
+    --color-text-blanco-claro: rgba(255, 255, 255, 60%);
+
+    --color-bg-claro: #f6f6f6;
+    --color-bg-blanco: #fff;
+    --color-bg-principal: #4fc5c7;
+    --color-bg-secundario: #005c6a;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.cabecera{
+    padding-top: 8rem;
+    background-image:url(../assets/logo-vmj1.png);
+    height: 30rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+}
+
+.titulo{
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.descripcion-empresa{
+    padding: 3rem 2rem;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-text-gris-oscuro);
+    text-align: left;
+}
+
+.descripcion{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color-text-gris-claro);
+    text-align: left;
+    line-height: 2rem;
+}
+
+
+.donde-encontrarnos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.donde-encontrarnos_container{
+    text-align: center;
+}
+
+.donde-encontrarnos_container h4 p button{
+    margin: 2rem;
+}
+
+.oficina-img{
+    width: 400px;
+    height: auto;
+    display: flex;
+}
+
+.btn {
+    background: var(--color-bg-principal);
+    border: none;
+    box-shadow: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--color-text-blanco);
+}
+
+.redes{
+    padding: 1.4rem;
+}
+
+.sci2{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.sci2 li{
+    list-style: none;
+}
+
+.sci2 li a{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-bg-principal);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sci2 li a .fa{
+    color: var(--color-text-blanco);
+    font-size: 20px;
+}
+
+.img2{
+    padding: 4rem;
+}
+
+.oficina-img1{
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:400px) {
+   
+    .title{
+        text-align: center;
+    }
+
+   .descripcion-empresa{
+    text-align: center;
+   }
+   
+    .oficina-img{
+        display: block;
+        width: 360px;
+        margin-left: 0.5rem;
+    }
+
+    .donde-encontrarnos {
+        display: block;
+        padding: 0;
+        width: 95%;
+    }
+
+    .donde-encontrarnos_container {
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    .img2{
+        display: block;
+        width: 100%;
+        padding-top: 2rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .oficina-img1{
+        width: 365px;
+        padding-top: 1rem;
+        
+    }
+
+    .img2{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width:600px) {
+
+    .imgs-oficina{
+        padding-left: 10rem;
+    }
+
+}
